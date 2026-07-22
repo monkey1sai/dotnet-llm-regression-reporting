@@ -1,0 +1,32 @@
+# Build and test output
+bin/
+obj/
+TestResults/
+artifacts/
+results/
+coverage/
+*.trx
+*.coverage
+*.coveragexml
+
+# IDE and user-local state
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+
+# Secrets and endpoint-local configuration
+.env
+.env.*
+!.env.example
+*.secrets.json
+endpoint-profiles/local/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+Thumbs.db
+.DS_Store

@@ -1,0 +1,22 @@
+schema: spec-driven
+
+context: |
+  Product: Windows-first enterprise regression and reporting for OpenAI-compatible LLM APIs
+  Target: .NET 10 LTS, C#, portable core libraries with Windows-first operations
+  Architecture: layered domain/application/provider/artifact/reporting/observability/host boundaries
+  Security: secret references only; never persist real credentials or unredacted sensitive payloads
+  Measurement: no automatic retries for measured inference; warm-up and evidence sufficiency are explicit
+  Evidence: canonical JSON is authoritative; Markdown, offline HTML, and JUnit are derived views
+
+rules:
+  proposal:
+    - Keep deployment, MCP, browser automation, and credential changes out of this repository
+  design:
+    - Prefer official or mature focused dependencies over custom frameworks
+    - Explain security, reproducibility, Windows portability, and measurement trade-offs
+  specs:
+    - Every normative requirement must be observable and testable
+    - Distinguish regression, infrastructure failure, skipped capability, and inconclusive evidence
+  tasks:
+    - Order work from offline contracts and fixtures to explicitly authorized live integration
+    - Include verification and redaction tests for every external boundary
